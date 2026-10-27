@@ -1,0 +1,17 @@
+4-
+
+xmllint --noout real-estate.xml
+
+
+• posséder un seul élément racine ; oui
+• avoir correctement fermé toutes les balises (ou utiliser des balises autofermantes) ; oui
+• respecter l’imbrication des éléments ; oui
+• utiliser des balises ouvrante et fermante de même nom, casse comprise ; oui
+• respecter les règles de nommage ; oui
+• utiliser correctement les guillemets pour les valeurs d’attributs ; oui
+• ne pas répéter un même attribut dans un élément ; oui
+• ne pas utiliser < dans une valeur d’attribut ; oui
+• respecter les règles relatives aux caractères réservés (§13) ; oui
+• ne référencer que des entités prédéfinies ou déclarées ; oui
+• placer la déclaration XML, si elle existe, tout au début du document, avec un encodage
+conforme à celui du fichier. oui

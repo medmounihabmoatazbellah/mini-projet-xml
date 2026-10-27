@@ -1,0 +1,28 @@
+3-
+
+xmllint --noout -valid real-estate.xml
+
+4-
+
+a- 
+xmllint --noout --valid real-estate-var1.xml
+
+real-estate-var1.xml:16: element real-estate: validity error : Element real-estate content
+ does not follow the DTD, expecting (agencies , owners , properties , flats), got
+  (owners properties flats agencies )
+</real-estate>
+
+the parser detected that the element agencies is not in the first order instead it
+ found owners.
+
+b- 
+
+xmllint --noout --valid real-estate-var2.xml
+
+
+real-estate-var2.xml:17: element real-estate: validity error : Element real-estate 
+content does not follow the DTD, expecting (agencies , owners , properties , flats), got
+ (CDATA agencies owners properties flats )
+</real-estate>
+
+the parser expect agencies but found text (CDATA) instead of agencies.

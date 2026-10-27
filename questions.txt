@@ -1,0 +1,7 @@
+how to validate DTD, doesn't require validation ?
+how to represent n-n relationship in XML (hierarchical structure) ?
+how to link id, idref and idrefs ?
+
+
+
+

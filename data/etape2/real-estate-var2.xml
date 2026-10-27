@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE real-estate [ 
+<!ELEMENT real-estate (agencies, owners, properties, flats)>
+<!ELEMENT agencies EMPTY>
+<!ELEMENT owners EMPTY>
+<!ELEMENT properties EMPTY>
+<!ELEMENT flats EMPTY> 
+]>
+
+<real-estate>
+    Example
+    <agencies></agencies>
+    <owners></owners>
+    <properties></properties>
+    <flats></flats>
+</real-estate>

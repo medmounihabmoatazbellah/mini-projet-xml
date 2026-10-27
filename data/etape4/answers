@@ -1,0 +1,11 @@
+1- 
+
+xmllint --noout real-estate.xml
+
+2-
+
+xmllint --noout --dtdvalid real-estate.dtd real-estate.xml
+
+3-
+
+conflit avec la liaison des ID et IDREF

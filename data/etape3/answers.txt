@@ -1,0 +1,28 @@
+4-
+
+xmllint --noout real-estate.xml
+
+• posséder un seul élément racine ; oui
+• avoir correctement fermé toutes les balises (ou utiliser des balises autofermantes) ; oui
+• respecter l’imbrication des éléments ; oui
+• utiliser des balises ouvrante et fermante de même nom, casse comprise ; oui
+• respecter les règles de nommage ; oui
+• utiliser correctement les guillemets pour les valeurs d’attributs ; oui
+• ne pas répéter un même attribut dans un élément ; oui
+• ne pas utiliser < dans une valeur d’attribut ; oui
+• respecter les règles relatives aux caractères réservés (§13) ; oui
+• ne référencer que des entités prédéfinies ou déclarées ; oui
+• placer la déclaration XML, si elle existe, tout au début du document, avec un encodage
+conforme à celui du fichier. oui
+
+xmllint --noout --valid real-estate.xml
+
+6-
+
+xmllint --noout --dtdvalid real-estate.dtd real-estate.xml
+
+real-estate.xml:3: I/O error : failed to load "realestate.dtd": No such file or directory
+<!DOCTYPE real-estate SYSTEM "realestate.dtd">
+                                              ^
+real-estate.xml:5: validity error : Validation failed: no DTD found !
+<real-estate>

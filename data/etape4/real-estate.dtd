@@ -1,0 +1,33 @@
+<!ELEMENT real-estate (agencies, owners, properties, flats)>
+
+<!ELEMENT agencies (agency*)>
+
+<!ELEMENT agency (addresse-electronique, numero-telephone)>
+<!ATTLIST agency 
+nom ID #REQUIRED>
+<!ELEMENT addresse-electronique (#PCDATA)>
+<!ELEMENT numero-telephone (#PCDATA)> 
+
+<!ELEMENT owners (owner*)>
+
+<!ELEMENT owner EMPTY>
+<!ATTLIST owner 
+nom ID #REQUIRED>
+
+<!ELEMENT properties (property*)>
+
+<!ELEMENT property (description, nombre-appartements,
+caracteristiques)>
+<!ATTLIST property
+nom ID #REQUIRED
+reference-proprietaire IDREF #REQUIRED>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT nombre-appartements (#PCDATA)>
+<!ELEMENT caracteristiques (#PCDATA)> 
+
+<!ELEMENT flats (flat*)> 
+
+<!ELEMENT flat (description, caracteristiques)>
+<!ATTLIST flat
+nom CDATA #REQUIRED
+reference-immobilier IDREF #REQUIRED>
