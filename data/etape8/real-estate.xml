@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE real-estate SYSTEM "real-estate.dtd">
+
+<real-estate>
+    <agencies>
+        <agency nom="Agence-Immobiliere">
+            <addresse-electronique>info@agence-immobiliere.com</addresse-electronique>
+            <adresse>
+                <numero>123</numero>
+                <rue>Rue de l'Immobilier</rue>
+                <code-postal>75000</code-postal>
+                <etat>Île-de-France</etat>
+                <pays>France</pays>
+            </adresse>
+            <numero-telephone>0123456789</numero-telephone>
+        </agency>
+    </agencies>
+    <owners>
+        <owner nom="Mohammed">
+            <adresse>
+                <numero>456</numero>
+                <rue>independance</rue>
+                <code-postal>75001</code-postal>
+                <region>Tunis</region>
+                <pays>Turnisie</pays>
+            </adresse>
+        </owner>
+    </owners>
+    <properties>
+        <property nom="deux-villa" reference-proprietaire="Mohammed">
+            <adresse>
+                <numero>789</numero>
+                <rue>Amir Abdel Kader</rue>
+                <code-postal>75002</code-postal>
+                <etat>Tiaret</etat>
+                <pays>Algerie</pays>
+            </adresse>
+            <description>bloc residential <flatReference FlatName="appartement-1"></flatReference> appartement-1<flatReference FlatName="appartement-2"></flatReference></description>
+            <nombre-appartements>2</nombre-appartements>
+            <caracteristiques>centre ville</caracteristiques>
+        </property>
+    </properties>
+    <flats>
+        <flat nom="appartement-1" reference-immobilier="deux-villa">
+            <date-information>
+                <date>2024-06-01</date>
+                <information>Appartement disponible à la location</information>
+            </date-information>
+            <description>Appartement de 3 chambres</description>
+            <caracteristiques>2 etage</caracteristiques>
+            <caracteristiques>balcon</caracteristiques>
+        </flat>
+        <flat nom="appartement-2" reference-immobilier="deux-villa">
+            <date-information>
+                <date-information>
+                    <date>2024-06-15</date>
+                    <information>Appartement en cours de rénovation</information>
+                </date-information>
+            </date-information>
+            <description>Appartement de 2 chambres</description>
+            <caracteristiques>1 etage</caracteristiques>
+            <caracteristiques>garage</caracteristiques>
+            <caracteristiques>cuisin</caracteristiques>
+            <caracteristiques>jaune</caracteristiques>
+            <caracteristiques>plantation avant porte</caracteristiques>
+        </flat>
+    </flats>
+</real-estate>

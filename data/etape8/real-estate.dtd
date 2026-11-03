@@ -1,0 +1,52 @@
+<!ELEMENT real-estate (agencies, owners, properties, flats)>
+
+<!-- agencies -->
+<!ELEMENT agencies (agency*)>
+
+<!ELEMENT agency ((adresse | addresse-electronique | numero-telephone)*)>
+<!ATTLIST agency 
+nom ID #REQUIRED>
+<!ELEMENT adresse (numero, rue, ((code-postal, (etat | region), pays) | ((etat | region), code-postal)))>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT rue (#PCDATA)>
+<!ELEMENT code-postal (#PCDATA)>
+<!ELEMENT etat (#PCDATA)>
+<!ELEMENT region (#PCDATA)>
+<!ELEMENT pays (#PCDATA)>
+
+<!ELEMENT addresse-electronique (#PCDATA)>
+<!ELEMENT numero-telephone (#PCDATA)> 
+
+<!-- owners -->
+<!ELEMENT owners (owner*)>
+
+<!ELEMENT owner (adresse)>
+<!ATTLIST owner 
+nom ID #REQUIRED>
+
+<!-- properties -->
+<!ELEMENT properties (property*)>
+
+<!ELEMENT property (adresse, description, nombre-appartements,
+caracteristiques)>
+<!ATTLIST property
+nom ID #REQUIRED
+reference-proprietaire IDREF #REQUIRED>
+<!ELEMENT description (#PCDATA | flatReference)*>
+<!ELEMENT flatReference (#PCDATA)>
+<!ATTLIST flatReference
+FlatName IDREF #REQUIRED>
+<!ELEMENT nombre-appartements (#PCDATA)>
+<!ELEMENT caracteristiques (#PCDATA)> 
+
+<!-- Flats -->
+<!ELEMENT flats (flat, flat)> 
+
+<!ELEMENT flat (date-information, description, caracteristiques, caracteristiques, caracteristiques?, 
+caracteristiques?, caracteristiques?)>
+<!ELEMENT date-information ((date, information) | date-information)*>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT information (#PCDATA)>
+<!ATTLIST flat
+nom ID #REQUIRED
+reference-immobilier IDREF #REQUIRED>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE real-estate SYSTEM "real-estate.dtd">
+
+<real-estate>
+    <agencies>
+        <agency nom="Agence-Immobiliere">
+            <addresse-electronique>info@agence-immobiliere.com</addresse-electronique>
+            <numero-telephone>0123456789</numero-telephone>
+        </agency>
+    </agencies>
+    <owners>
+        <owner nom="Mohammed"></owner>
+    </owners>
+    <properties>
+        <property nom="deux-villa" reference-proprietaire="Mohammed">
+            <description>bloc residential<flatReference FlatName="appartement-1"></flatReference><flatReference FlatName="appartement-2"></flatReference></description>
+            <nombre-appartements>2</nombre-appartements>
+            <caracteristiques>centre ville</caracteristiques>
+        </property>
+    </properties>
+    <flats>
+        <flat nom="appartement-1" reference-immobilier="deux-villa">
+            <description>Appartement de 3 chambres</description>
+            <caracteristiques>2 etage</caracteristiques>
+        </flat>
+        <flat nom="appartement-2" reference-immobilier="deux-villa">
+            <description>Appartement de 2 chambres</description>
+            <caracteristiques>1 etage</caracteristiques>
+        </flat>
+    </flats>
+</real-estate>

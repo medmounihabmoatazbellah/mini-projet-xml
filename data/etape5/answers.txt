@@ -1,0 +1,3 @@
+xmllint --noout real-estate.xml
+
+xmllint --noout --dtdvalid real-estate.dtd real-estate.xml
