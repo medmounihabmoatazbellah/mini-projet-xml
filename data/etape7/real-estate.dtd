@@ -40,7 +40,7 @@ FlatName IDREF #REQUIRED>
 <!ELEMENT caracteristiques (#PCDATA)> 
 
 <!-- Flats -->
-<!ELEMENT flats (flat, flat)> 
+<!ELEMENT flats (flat, flat+)> 
 
 <!ELEMENT flat (description, caracteristiques, caracteristiques, caracteristiques?, 
 caracteristiques?, caracteristiques?)>

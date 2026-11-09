@@ -44,7 +44,7 @@ FlatName IDREF #REQUIRED>
 
 <!ELEMENT flat (date-information, description, caracteristiques, caracteristiques, caracteristiques?, 
 caracteristiques?, caracteristiques?)>
-<!ELEMENT date-information ((date, information) | date-information)*>
+<!ELEMENT date-information ((date, information) | date-information)+>
 <!ELEMENT date (#PCDATA)>
 <!ELEMENT information (#PCDATA)>
 <!ATTLIST flat

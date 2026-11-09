@@ -6,7 +6,8 @@
 <!ELEMENT agency (adresse , addresse-electronique , numero-telephone)>
 <!ATTLIST agency 
 nom ID #REQUIRED>
-<!ELEMENT adresse (numero, rue, ((code-postal, (etat | region), pays) | ((etat | region), code-postal)))>
+<!ELEMENT adresse (numero, rue, ((code-postal, (etat | region), pays) | ((etat | region),
+ code-postal)))>
 <!ELEMENT numero (#PCDATA)>
 <!ELEMENT rue (#PCDATA)>
 <!ELEMENT code-postal (#PCDATA)>
